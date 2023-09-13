@@ -15,6 +15,12 @@ const router = require("./routes/router");
 app.use(express.json());
 app.use(cookieParser(""));
 app.use(cors());
+
+app.get("/", (req, res) => {
+    res.setHeader("Access-Control-Allow-Credentials","true")
+    res.send("API is running..");
+
+    
 app.use(router);
 
 
